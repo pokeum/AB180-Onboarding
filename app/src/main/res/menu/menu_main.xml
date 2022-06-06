@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myapplication.MainActivity">
+    <item
+        android:id="@+id/launch_mode"
+        android:orderInCategory="1"
+        android:title="@string/launch_mode"
+        app:showAsAction="never" >
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/launch_mode_singleTop"
+                    android:title="@string/launch_mode_singleTop"/>
+                <item
+                    android:id="@+id/launch_mode_singleTask"
+                    android:title="@string/launch_mode_singleTask"/>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/coding_assignment"
+        android:orderInCategory="2"
+        android:title="@string/coding_assignment" />
+</menu>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AB180 Blog</string>
+    <string name="launch_mode">Launch mode</string>
+    <string name="launch_mode_singleTop">singleTop</string>
+    <string name="launch_mode_singleTask">singleTask</string>
+    <string name="launch_mode_singleInstance">singleInstance</string>
+    <string name="launch_mode_singleInstancePerTask">singleInstancePerTask</string>
+    <string name="coding_assignment">Coding Assignment</string>
+</resources>
