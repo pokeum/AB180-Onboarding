@@ -37,16 +37,20 @@ class Event(private val category: String,
         withContext(Dispatchers.IO) {
             //delay(3000) // DEBUG
             processCounter++
-            val simpleHttpJson = SimpleHttpJson(getJsonString())
-            simpleHttpJson.sendPost()
+            try {
+                val simpleHttpJson = SimpleHttpJson(getJsonString())
+                simpleHttpJson.sendPost()
+            } catch (e: Exception) { throw Exception(e) }
         }
 
     @Throws
     suspend fun postAndGetResponse(scheme: String, host: String, path: String): String =
         withContext(Dispatchers.IO) {
             processCounter++
-            val simpleHttpJson = SimpleHttpJson(scheme, host, path, getJsonString())
-            simpleHttpJson.sendPost()
+            try {
+                val simpleHttpJson = SimpleHttpJson(scheme, host, path, getJsonString())
+                simpleHttpJson.sendPost()
+            } catch (e: Exception) { throw Exception(e) }
         }
 
     /* 수행 횟수를 제한한다. */

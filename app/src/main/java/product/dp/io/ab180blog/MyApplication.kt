@@ -9,7 +9,7 @@ import product.dp.io.sdk.Airbridge as MyAirbridge
 
 class MyApplication : Application() {
 
-    private val registerAll: Boolean = true
+    private val registerAll: Boolean = false
     private val registerMine: Boolean = true
 
     companion object {

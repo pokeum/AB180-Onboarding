@@ -41,10 +41,12 @@ class Tracker {
                     response = event.postAndGetResponse()
                     CustomLog.sdkDebug(tag, "Response: $response")
                     isCompleted = true
-                } catch (exc: BadResponseCodeException) {
-                    CustomLog.sdkDebug(tag, "BadResponseCodeException: ${exc.message}")
-                } catch (exc: SocketTimeoutException) {
-                    CustomLog.sdkDebug(tag, "SocketTimeoutException: ${event.getProcessCounter()}st process")
+                } catch (e: BadResponseCodeException) {
+                    CustomLog.sdkDebug(tag, "BadResponseCodeException: ${e.message}")
+                } catch (e: SocketTimeoutException) {
+                    CustomLog.sdkDebug(tag, "SocketTimeoutException: ${e.message}")
+                } catch (e: Exception) {
+                    CustomLog.sdkDebug(tag, "Exception: ${e.message}")
                 }
                 if (isCompleted) { CustomLog.sdkDebug(tag, "Complete") }
             }
