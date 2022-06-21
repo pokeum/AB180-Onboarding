@@ -9,7 +9,7 @@
 
     <application>
         <provider
-            android:authorities="${applicationId}.AirbridgeContentProvider"
+            android:authorities="product.dp.io.sdk.AirbridgeContentProvider"
             android:name=".contentprovider.LifecycleProvider"
             android:exported="false" />
     </application>
